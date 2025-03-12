@@ -153,13 +153,13 @@ function Student() {
         </div>
         <button
           id="submit"
-          className="bg-[#700608] rounded-lg text-white p-2 text-xl w-full mt-8"
+          className="bg-[#700608] rounded-lg text-white p-2 text-xl w-full mt-8 hover:bg-[#222]"
         >
           Update
         </button>
         <Link
           to={"/Students"}
-          className="bg-[#700608] block rounded-lg text-white p-2 text-xl w-full text-center mt-4"
+          className="bg-[#700608] block rounded-lg text-white p-2 text-xl w-full text-center mt-4 hover:bg-[#222]"
         >
           Back
         </Link>

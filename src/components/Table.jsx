@@ -47,7 +47,7 @@ function Table({ AllData }) {
           </tr>
         </thead>
         <tbody>
-          {(AllData == "true" ? tableData : tableData.slice(0, 9)).map(
+          {(AllData == "true" ? tableData : tableData.slice(0, 5)).map(
             (e, i) => (
               <tr
                 key={i}

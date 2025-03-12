@@ -13,14 +13,17 @@ function Popup({ message, setOpenPopup }) {
           </p>
         )}
         <h2>{message.text}</h2>
-        <div className="buttons w-full flex gap-4 justify-center">
+        <div className="buttons w-full flex gap-4 justify-center ">
           <button
             onClick={() => setOpenPopup(false)}
-            className="bg-[#700608] rounded p-2"
+            className="bg-[#700608] rounded p-2 hover:bg-white hover:text-black"
           >
             Close
           </button>
-          <Link to={"/Students"} className="bg-[#700608] block rounded p-2">
+          <Link
+            to={"/Students"}
+            className="bg-[#700608] block rounded p-2 hover:bg-white hover:text-black"
+          >
             Back to table
           </Link>
         </div>

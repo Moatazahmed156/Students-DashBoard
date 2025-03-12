@@ -13,7 +13,7 @@ function Dashboard() {
         <Table AllData="false" />
         <Link
           to="/Students"
-          className="block py-2 px-4 mt-4 text-xl rounded-lg text-white bg-[#700608] w-fit"
+          className="block py-2 px-4 mt-4 text-xl rounded-lg text-white bg-[#700608] w-fit hover:bg-[#222]"
         >
           View All Data
         </Link>
