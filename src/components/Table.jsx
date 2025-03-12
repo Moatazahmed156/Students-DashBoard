@@ -33,7 +33,7 @@ function Table({ AllData }) {
     );
   }
   return (
-    <div className="">
+    <div className="w-full">
       <table className="w-full mt-[20px]  border-collapse [&_tr]:border-y-[1px] [&_tr]:border-[#eee] table-auto">
         <thead>
           <tr className=" text-[20px] [&_th]:text-center [&_th]:py-[10px] [&_th]:px-[20px] [&_th]:overflow-hidden [&_th]:whitespace-nowrap [&_th]:text-clip">
