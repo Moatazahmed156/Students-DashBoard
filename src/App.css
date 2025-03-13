@@ -15,6 +15,13 @@
   box-sizing: border-box;
   animation: rotation 1s linear infinite;
 }
+::-webkit-scrollbar {
+  display: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
 
 @keyframes rotation {
   0% {

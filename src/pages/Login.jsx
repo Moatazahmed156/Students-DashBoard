@@ -21,7 +21,7 @@ function Login() {
         "https://fake-form.onrender.com/api/login",
         LoginData
       );
-      localStorage.setItem("token", [response.data.token, LoginData.email]);
+      localStorage.setItem("token", [response.data.token]);
       setIsAuth(true);
       login.innerText = "Login";
       login.removeAttribute("disabled");

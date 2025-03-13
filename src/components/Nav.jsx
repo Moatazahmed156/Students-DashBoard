@@ -4,8 +4,8 @@ function Nav() {
   return (
     <div className="min-h-screen bg-[#222222] py-4 flex flex-col gap-4 items-center min-w-[17%]">
       <img src={logo} alt="180 Daraga Logo" className="size-24" />
-      <ul className="flex flex-col gap-4 w-full text-white text-lg">
-        <li className="w-full">
+      <ul className="flex flex-col gap-2 w-full text-white text-lg">
+        <li>
           <NavLink to="/" className="block px-2 py-2 mx-2 rounded">
             Dashboard
           </NavLink>

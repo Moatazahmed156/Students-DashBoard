@@ -1,6 +1,8 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import { MdDelete, MdPersonAdd } from "react-icons/md";
+
 function Table({ AllData }) {
   const [tableData, setTableData] = useState([]);
   useEffect(() => {
@@ -62,18 +64,15 @@ function Table({ AllData }) {
                 <td>{e.university}</td>
                 {AllData == "true" ? (
                   <td className="flex gap-2 text-[17px] text-white">
-                    <button
-                      onClick={() => Delete(e._id)}
-                      className="bg-red-500 text-md rounded p-1"
-                    >
-                      Delete
-                    </button>
-                    <Link
-                      to={`/Students/ID/${e._id}`}
-                      className="block bg-green-500 text-md rounded p-1 px-2"
-                    >
-                      Edit
-                    </Link>
+                    <div className="flex items-center bg-red-500 text-md rounded p-1">
+                      <MdDelete />
+
+                      <button onClick={() => Delete(e._id)}>Delete</button>
+                    </div>
+                    <div className="block flex items-center gap-1 bg-green-500 text-md rounded p-1 px-2">
+                      <MdPersonAdd />
+                      <Link to={`/Students/ID/${e._id}`}>Edit</Link>
+                    </div>
                   </td>
                 ) : null}
               </tr>
