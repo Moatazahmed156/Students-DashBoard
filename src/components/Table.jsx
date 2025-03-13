@@ -5,6 +5,7 @@ import { MdDelete, MdPersonAdd } from "react-icons/md";
 
 function Table({ AllData }) {
   const [tableData, setTableData] = useState([]);
+  const [DataFetched, setDataFetched] = useState(false);
   useEffect(() => {
     async function fetchData() {
       try {
@@ -12,6 +13,7 @@ function Table({ AllData }) {
           "https://fake-form.onrender.com/api/students"
         );
         setTableData(response.data.data);
+        setDataFetched(true);
       } catch (err) {
         console.log("Error: ", err);
       }
@@ -27,10 +29,17 @@ function Table({ AllData }) {
       console.error("Error deleting student:", err);
     }
   }
-  if (!tableData.length) {
+  if (!DataFetched) {
     return (
-      <div className="flex ">
+      <div className="flex justify-center items-center my-24">
         <div className="loader"></div>
+      </div>
+    );
+  }
+  if (DataFetched && !tableData.length) {
+    return (
+      <div className="flex items-center justify-center w-full my-24">
+        <p className="text-3xl font-bold">No data Found</p>
       </div>
     );
   }
