@@ -43,7 +43,7 @@ function Login() {
 
       <form
         onSubmit={HandleLogin}
-        className="bg-gray-300 w-[650px] h-[400px] rounded-xl rounded-l-none flex flex-col justify-center items-center"
+        className="bg-white w-[650px] h-[400px] rounded-xl rounded-l-none flex flex-col justify-center items-center"
       >
         <h1 className="text-5xl text-gray-900">Members Login</h1>
         <div className="w-[95%] text-2xl mt-4">
@@ -55,7 +55,7 @@ function Login() {
             name="email"
             placeholder="E-mail"
             onChange={handleChange}
-            className="h-[45px] bg-gray-300 p-2 pl-[30px] w-full border-b-2 border-[#222] outline-none"
+            className="h-[45px] p-2 pl-[30px] w-full border-b-2 border-[#222] outline-none"
           />
         </div>
         <div className="w-[95%] text-2xl">
@@ -67,7 +67,7 @@ function Login() {
             name="password"
             placeholder="Password"
             onChange={handleChange}
-            className="h-[45px] pl-[30px] bg-gray-300 p-2 w-full border-b-2 border-[#222] outline-none"
+            className="h-[45px] pl-[30px] p-2 w-full border-b-2 border-[#222] outline-none"
           />
         </div>
         <p className="text-xl mt-4 font-bold text-[#222]">{message}</p>
