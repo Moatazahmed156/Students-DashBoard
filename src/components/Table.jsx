@@ -20,7 +20,7 @@ function Table({ AllData }) {
     try {
       await axios.delete(`https://fake-form.onrender.com/api/students/${id}`);
       setTableData(tableData.filter((student) => student._id !== id));
-      alert(`Student with ID ${id} deleted Successfully`);
+      alert(`Student with ID: ${id} deleted Successfully`);
     } catch (err) {
       console.error("Error deleting student:", err);
     }
