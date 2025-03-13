@@ -78,9 +78,9 @@ function Student() {
       <Nav />
       <form
         onSubmit={UpdateData}
-        className=" flex flex-col items-center w-[90%] px-4 mt-8"
+        className=" flex flex-col items-center [&_input]:rounded [&_select]:rounded w-[90%] px-4 mt-4"
       >
-        <div className="Name flex flex-col mx-4 w-full">
+        <div className="Name flex flex-col mx-4  w-full">
           <label htmlFor="name">Name</label>
           <input
             type="text"
@@ -91,7 +91,7 @@ function Student() {
             value={StudentData.name}
           />
         </div>
-        <div className="Email mt-4 flex flex-col w-full">
+        <div className="Email mt-2 flex flex-col w-full">
           <label htmlFor="email">Email</label>
           <input
             type="email"
@@ -102,7 +102,7 @@ function Student() {
             value={StudentData.email}
           />
         </div>
-        <div className="Phone mt-4 flex flex-col w-full">
+        <div className="Phone mt-2 flex flex-col w-full">
           <label htmlFor="phone">Phone</label>
           <input
             type="text"
@@ -113,7 +113,7 @@ function Student() {
             value={StudentData.phone}
           />
         </div>
-        <div className="Age flex flex-col mx-4 w-full">
+        <div className="Age flex flex-col mt-2 mx-4 w-full">
           <label htmlFor="age">Age</label>
           <input
             type="number"
@@ -124,7 +124,7 @@ function Student() {
             value={StudentData.age}
           />
         </div>
-        <div className="University mt-4 w-full">
+        <div className="University mt-2 w-full">
           <label htmlFor="university">University</label>
           <select
             name="university"
@@ -139,7 +139,7 @@ function Student() {
             <option value="Other">Other</option>
           </select>
         </div>
-        <div className="Level mt-4 w-full">
+        <div className="Level mt-2 w-full">
           <label htmlFor="university_level">University Level</label>
           <select
             name="university_level"
@@ -156,13 +156,13 @@ function Student() {
         </div>
         <button
           id="submit"
-          className="bg-[#700608] rounded-lg text-white p-2 text-xl w-full mt-8 hover:bg-[#222]"
+          className="bg-[#700608] rounded-lg text-white p-2 text-xl w-full mt-4 hover:bg-[#222]"
         >
           Update
         </button>
         <Link
           to={"/Students"}
-          className="bg-[#700608] block rounded-lg text-white p-2 text-xl w-full text-center mt-4 hover:bg-[#222]"
+          className="bg-[#700608] block rounded-lg text-white p-2 text-xl w-full text-center mt-2 hover:bg-[#222]"
         >
           Back
         </Link>
