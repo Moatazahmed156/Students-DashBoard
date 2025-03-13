@@ -1,7 +1,10 @@
 import Table from "../components/Table";
 import Nav from "../components/Nav";
-import { Link } from "react-router-dom";
+import { Link, Navigate } from "react-router-dom";
 function Dashboard() {
+  if (!localStorage.getItem("token")) {
+    return <Navigate to={"/Login"} />;
+  }
   return (
     <div className="flex gap-4">
       <Nav />

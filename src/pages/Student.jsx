@@ -58,6 +58,9 @@ function Student() {
       setMessage({ icon: <BiError />, text: err.message });
     }
   }
+  if (!localStorage.getItem("token")) {
+    return <Navigate to={"/Login"} />;
+  }
   if (!foundID) {
     return <Navigate to={"*"} replace />;
   }
