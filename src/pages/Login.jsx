@@ -17,12 +17,9 @@ function Login() {
     login.innerText = "Wait for response...";
     login.setAttribute("disabled", "true");
     try {
-      const response = await axios.post(
-        "https://fake-form.onrender.com/api/login",
-        LoginData
-      );
+      await axios.post("https://fake-form.onrender.com/api/login", LoginData);
       localStorage.setItem("User Data", JSON.stringify(LoginData));
-      setIsAuth(response.data.success);
+      setIsAuth(true);
       login.innerText = "Login";
       login.removeAttribute("disabled");
     } catch (err) {
