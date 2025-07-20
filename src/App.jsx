@@ -10,6 +10,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 function App() {
   return (
     <BrowserRouter>
+      {/* <AuthCheck /> */}
       <Routes>
         <Route path="/" element={<Dashboard />} />
         <Route path="/Students" element={<Data />} />
